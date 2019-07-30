@@ -1,0 +1,13 @@
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  height: 46px;
+  padding: 0 34px;
+  border-radius: 23px;
+  @include font-mixin('Montserrat');
+  font-size: 18px;
+  @include medium;
+  color: #fff;
+  background: $main-color;
+  cursor: pointer;
+}

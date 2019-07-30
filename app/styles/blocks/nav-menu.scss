@@ -1,0 +1,42 @@
+.nav-menu {
+  display: flex;
+
+  &__item {
+    margin-right: 35px;
+
+    @include laptop {
+      margin-right: 23px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    @include semi-bold;
+    line-height: 17px;
+    color: $main-color;
+  }
+
+  &--mobile {
+    flex-direction: column;
+
+    .nav-menu {
+      &__item {
+        margin-right: 0;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__link {
+        font-size: 18px;
+        @include semi-bold;
+      }
+    }
+  }
+}

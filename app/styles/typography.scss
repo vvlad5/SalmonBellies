@@ -1,0 +1,27 @@
+body {
+  font-family: "Montserrat",
+  -apple-system,
+  'BlickMacSystemFont',
+  'Segoe UI',
+  'Roboto',
+  'Oxygen',
+  'Ubuntu',
+  'Cantarell',
+  'Fira Sans',
+  'Droid Sans',
+  'Helvetica Neue',
+  sans-serif;
+  font-size: 13px;
+  @include regular;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  line-height: 1;
+}

@@ -1,0 +1,106 @@
+// Media
+@mixin mobile-l() {
+  @media (max-width: $mobileMedia) {
+    @content;
+  }
+}
+
+@mixin mobile-m() {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin mobile-s() {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin no-mobile {
+  @media (min-width: $mobileMedia + 1) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media(min-width: $mobileMedia + 1) and (max-width: $tabletMedia) {
+    @content;
+  }
+}
+
+@mixin tablet-and-phone() {
+  @media(max-width: $tabletMedia + 1) {
+    @content;
+  }
+}
+
+@mixin tablet-and-laptop() {
+  @media(max-width: $laptopMedia + 1) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media(min-width: $tabletMedia + 1) and (max-width: $laptopMedia) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media(min-width: $laptopMedia + 2) {
+    @content;
+  }
+}
+
+@mixin desktop-and-laptop() {
+  @media(min-width: $tabletMedia + 2) {
+    @content;
+  }
+}
+
+
+// Fonts
+@mixin font($family, $file, $weight, $style: "normal") {
+  $font_file_path: $fonts_dir+$family+"/#{$file}";
+
+  @font-face {
+    font-family: $family;
+    src: url($font_file_path + '.woff2') format('woff2'),
+      url($font_file_path + '.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin font-mixin($family) {
+  font-family: "#{$family}";
+}
+
+@mixin thin() {
+  font-weight: 100;
+}
+
+@mixin light() {
+  font-weight: 300;
+}
+
+@mixin regular() {
+  font-weight: 400;
+}
+
+@mixin medium() {
+  font-weight: 500;
+}
+
+@mixin semi-bold() {
+  font-weight: 600;
+}
+
+@mixin bold() {
+  font-weight: 700;
+}
+
+@mixin extra-bold() {
+  font-weight: 900;
+}

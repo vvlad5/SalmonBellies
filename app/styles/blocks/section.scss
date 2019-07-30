@@ -1,0 +1,32 @@
+.section {
+  &__header {
+    margin-bottom: 23px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 36px;
+    @include light;
+    line-height: 44px;
+    color: $main-color;
+
+    @include tablet-and-phone {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__description {
+    max-width: 717px;
+    margin: 0 auto;
+    font-size: 14px;
+    @include light;
+    line-height: 24px;
+  }
+
+  &--products {
+    padding: 50px 0 32px;
+    background: url('../images/design/products-bg/1.jpg') no-repeat center / cover;
+  }
+}

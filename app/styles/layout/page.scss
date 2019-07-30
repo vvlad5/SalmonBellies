@@ -1,0 +1,23 @@
+.page {
+  overflow-x: hidden;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  &__header {
+
+  }
+
+  &__content {
+    flex: 1 0 auto;
+    min-height: 1px;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+}

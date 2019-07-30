@@ -1,0 +1,55 @@
+{
+  "path": "",
+  "page-title": "SalmonBellies",
+  "page-class": "main-page",
+  "nav": [
+    "Our products",
+    "Receipes",
+    "Services",
+    "The promise",
+    "Origin",
+    "Markets",
+    "CSR",
+    "Company",
+    "Contacts"
+  ],
+  "slogans": [
+    "Salmonbellies and Lyxfish commit to sell at NO higher prices then quoted from our partner Kalaneuvos",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolores dolorum fugit incidunt omnis.",
+    "Amet cum eveniet quo reiciendis repellat repudiandae, ullam velit. Labore magni perspiciatis, sapiente ullam."
+  ],
+  "products": [
+    {
+      "img": "1.jpg",
+      "title": "TROUT WHOLE ONCORHYNCHUS MYKISS"
+    },
+    {
+      "img": "2.jpg",
+      "title": "TROUT FILLET ONCORHYNCHUS MYKISS"
+    },
+    {
+      "img": "3.jpg",
+      "title": "SALMON WHOLE SALMO SALAR"
+    },
+    {
+      "img": "4.jpg",
+      "title": "SALMON C-CUT FILLET SALMO SALAR"
+    },
+    {
+      "img": "5.jpg",
+      "title": "WHITEFISH COREGONUS LAVARETUS"
+    },
+    {
+      "img": "6.jpg",
+      "title": "WHITEFISH FILLET WITHOUT SKIN AND SCALED"
+    },
+    {
+      "img": "7.jpg",
+      "title": "FARMED BROWN TROUT SALMO TRUTTA"
+    },
+    {
+      "img": "8.jpg",
+      "title": "FARMED BROWN TROUT FILLET SALMO TRUTTA"
+    }
+  ]
+}

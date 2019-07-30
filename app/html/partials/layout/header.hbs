@@ -1,0 +1,26 @@
+<header class="header page__header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__group">
+        <div class="header__top">
+          <nav class="header__nav">
+            {{> blocks/nav-menu
+              mix="header__nav-menu"
+            }}
+          </nav>
+          {{> ui/lang-switcher
+            mix="header__lang-switcher"
+          }}
+        </div>
+        {{> blocks/logo
+          mix="header__logo"
+        }}
+      </div>
+      <div class="header__slogans js-slogans">
+        {{#each slogans}}
+          <p class="header__slogan">{{this}}</p>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</header>

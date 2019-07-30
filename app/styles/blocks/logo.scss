@@ -1,0 +1,66 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $main-color;
+
+  &__img {
+    margin-bottom: 10px;
+
+    @include tablet {
+      width: 110px;
+    }
+
+    @include mobile-l {
+      width: 90px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    @include font-mixin("GothamPro");
+    font-size: 28px;
+    @include extra-bold;
+    text-align: center;
+
+    @include mobile-l {
+      margin-bottom: 5px;
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    @include semi-bold;
+    line-height: 20px;
+    text-align: center;
+
+    @include mobile-l {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &--horizontal {
+    flex-direction: row;
+    text-align: left;
+
+    .logo {
+      &__img {
+        width: 67px;
+        margin-bottom: 0;
+        margin-right: 13px;
+      }
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__description {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+}

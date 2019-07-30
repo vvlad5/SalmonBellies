@@ -1,0 +1,45 @@
+{{> layout/head}}
+
+<body class="page {{page-class}}">
+{{> blocks/preloader}}
+<div class="page__inner">
+
+  {{> layout/header}}
+  <main class="page__content">
+    <section class="section section--products">
+      <div class="section__header">
+        <div class="container">
+          <h2 class="section__title">Main fish products</h2>
+          <p class="section__description">The fish is of premium quality due to aquaculture and harvest in accordance to
+            ASC certified criterias and with optimal combination of fish feed during the farming syclus</p>
+        </div>
+      </div>
+      <div class="section__content">
+        <div class="container">
+          <div class="products">
+            <div class="products__grid">
+              {{#each products}}
+                <a class="products__item" href="#">
+                  <figure class="products__thumb">
+                    <img src="images/content/products/{{img}}" alt="">
+                  </figure>
+                  <h3 class="products__title">{{title}}</h3>
+                </a>
+              {{/each}}
+            </div>
+            <button class="btn products__btn">View all products</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  {{> layout/footer}}
+
+</div>
+{{> blocks/mb-menu}}
+{{> ui/mb-menu-toggle}}
+
+<script defer src="{{path}}js/main.js"></script>
+</body>
+
+{{> layout/bottom}}
