@@ -4,20 +4,24 @@ export default class Slogans {
     this._curr = 0;
     this._total = elems.length;
     this._showTime = 5000;
+    this._timerId = null;
 
     this._setActive();
-    this._run();
+    this._addEvents();
   }
 
-  _run() {
-    setInterval(() => {
-      this._changeActiveItem();
+  _setTimeout() {
+    this._clearTimerId();
+    this._timerId = setTimeout(() => {
+      this._removeActive();
     }, this._showTime);
   }
 
-  _changeActiveItem() {
-    this._removeActive();
+  _clearTimerId() {
+    clearTimeout(this._timerId);
+  }
 
+  _changeActiveItem() {
     if (this._curr + 1 > this._total - 1) {
       this._curr = 0;
     } else {
@@ -40,10 +44,22 @@ export default class Slogans {
     const handler = () => {
       currActive.removeEventListener('transitionend', handler);
       currActive.style.display = '';
+      this._changeActiveItem();
       this._setActive();
+      this._setTimeout();
     };
     currActive.addEventListener('transitionend', handler);
     currActive.classList.remove('active');
+  }
+
+  _addEvents() {
+    window.addEventListener('focus', () => {
+      this._setTimeout();
+    });
+
+    window.addEventListener('blur', () => {
+      this._clearTimerId();
+    });
   }
 
   static init() {
