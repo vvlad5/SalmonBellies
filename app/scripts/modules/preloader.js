@@ -1,5 +1,8 @@
 export default class Preloader {
   static disablingPreloader() {
+    const event = new CustomEvent('hideScroll');
+    document.dispatchEvent(event);
+
     const preloader = document.querySelector('.preloader');
     const handler = () => {
       preloader.removeEventListener('animationend', handler);
@@ -19,9 +22,6 @@ export default class Preloader {
   }
 
   static init() {
-    const event = new CustomEvent('hideScroll');
-    document.dispatchEvent(event);
-
     window.addEventListener('load', Preloader.disablingPreloader);
   }
 };
